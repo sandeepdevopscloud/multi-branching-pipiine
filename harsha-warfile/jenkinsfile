@@ -1,0 +1,14 @@
+node('master') 
+{
+    stage('cont-downlaod-s1-git') 
+	{
+    git 'https://github.com/sandeepdevopscloud/harsha-warfile.git'
+    }
+}
+node('master') 
+{
+    stage('cont-build-s2-maven') 
+	{
+    sh 'mvn package'
+    }
+}
